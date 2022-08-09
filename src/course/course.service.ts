@@ -9,7 +9,7 @@ export class CourseService {
   }
 
   findAll() {
-    return `This action returns all course`;
+    return `This action   returns all course`;
   }
 
   findOne(id: number) {
