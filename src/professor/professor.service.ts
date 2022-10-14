@@ -7,10 +7,10 @@ import { Professor } from './entities/professor.entity';
 
 @Injectable()
 export class ProfessorService {
-constructor(
-  @InjectRepository(Professor)
-   private professorRepository:Repository<Professor>
-   ){}
+  constructor(
+    @InjectRepository(Professor)
+    private professorRepository: Repository<Professor>,
+  ) {}
 
   create(createProfessorDto: CreateProfessorDto) {
     return this.professorRepository.save(createProfessorDto);
@@ -21,11 +21,11 @@ constructor(
   }
 
   findOne(id: number) {
-    return this.professorRepository.findOne(id) ;
+    return this.professorRepository.findOne(id);
   }
 
   update(id: number, updateProfessorDto: UpdateProfessorDto) {
-    return this.professorRepository.update(id,updateProfessorDto);
+    return this.professorRepository.update(id, updateProfessorDto);
   }
 
   remove(id: number) {
